@@ -1,0 +1,177 @@
+﻿* {margin:0;}
+a {color:#6EA1D6;text-decoration:none}
+input{outline: none;}
+body {background:rgba(248,248,248,1);background-image:url('../img/background.png');background-size:100%;background-repeat:no-repeat;}
+.navigation {width:100%;padding:10px 0;height:30px;}
+.navigation .center-div {color:#fff;text-align:center;margin:0 auto;font-size:17px;margin-top:5px;float:left;position:absolute;left:0;right:0;margin-left:auto;margin-right:auto;}
+.navigation .rigth-div {color:#fff;width:60px;text-align:center;margin:0 auto;font-size:15px;margin-top:5px;float:right;}
+.navigation .left-img {float:left;margin:0 15px;margin-top:8px;}
+.share-div input{
+    position: absolute;
+    right: 0;
+}
+.title-div{
+    text-align: center;
+    width: 100%;
+    margin-top: 7vh;
+}
+.title-div img{
+    width: 80%;
+}
+.body-div{
+    text-align: center;
+    width: 100%;
+    margin-top: 1vh;
+}
+.body-div img{
+    width: 90%;
+}
+.info-div{
+    width: 100%;
+    text-align: center;
+    margin-top: 3vh;
+}
+.border-div{
+    text-align: left;
+    padding:20px;
+    margin:0 auto;
+    width: calc( 90% - 40px );
+    background:url('../img/border.png');background-repeat:round;
+}
+.title-p{
+    color: #FC414F;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.info-p{
+    font-size: 12px;
+    line-height: 20px;
+}
+.button-div{
+    display: flex;
+    margin-top: 15px;
+}
+.left{
+    width: 50%;
+    text-align: center;
+}
+.right{
+    width: 50%;
+    text-align: center;
+}
+.bottom-div{
+    text-align: center;
+    width: 100%;
+    margin-top: 3vh;
+}
+.bottom-div p{
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+/**dialog**/
+.background {
+	width:100%;
+	height:100vh;
+	background:#000000;
+	opacity:0.5;
+	position:fixed;
+	z-index:998;
+	top:0;
+	margin-top:0;
+	display:flex;
+}
+.dialog-div {
+	width:100%;
+	height: 100%;
+	justify-content:center;
+	align-items:center;
+	margin-top:0;
+	background-color:transparent;
+	display:flex;
+}
+.dialog-div .dialog {
+    background:url('../img/dialog-background.png');
+    background-repeat:round;
+    height: 350px;
+	position:fixed;
+	z-index:999;
+	margin:auto;
+	top: 0;
+    bottom: 0;
+	left:0;
+	right:0;
+	text-align:center;
+	width:85%;
+	border-radius:6px;
+}
+.dialog .top {
+	padding:16px;
+    padding-bottom:0;
+    margin-bottom: 12vh;
+}
+.dialog .title {
+    color: #FFEBB4;
+    margin-top: 3vh;
+	font-size:18px;
+	font-weight:600;
+}
+.dialog .item{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.dialog .item span{
+    font-size: 12px;
+    color: black;
+    display: block;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #B4B4B4;
+    border-radius: 34px;
+    margin-left: 5.5%;
+    margin-bottom: 10%;
+}
+.click{
+    background-color: #F4673E;
+    color: #fff !important;
+    border:1px solid #F4673E !important;
+}
+.dialog .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+}
+.dialog .button {
+    background:url('../img/button-background.png');
+    background-size: 100%;
+    background-repeat:no-repeat;
+    color: #C67014;
+    width:40%;
+    line-height: 40px;
+    height: 45px;
+    font-size:16px;
+    margin:0 auto;
+}
+.gb-img{
+    float: right;
+    margin-top: -54px;
+    margin-right: 20px;
+}
+/**iPhone4、5*/
+@media screen and (max-width:330px) {
+    .dialog-div .dialog{
+        height: 300px;
+    }
+    .dialog .button{
+        line-height: 31px;
+    }
+    .dialog .bottom{
+        height: 48px;
+    }
+}

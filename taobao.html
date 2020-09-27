@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>淘宝红包</title>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/hongbao.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="navigation">
+        <img class="left-img" src="img/backleft.png" />
+        <div class="center-div">品牌首单礼金</div>
+        <div class="rigth-div"><img src="img/omit.png" /></div>
+    </div>
+    <div class="share-div"><input type="image" src="img/share.png" /></div>
+    <div class="title-div"><img src="img/title.png" /></div>
+    <div class="body-div"><img src="img/body.png" /></div>
+    <div class="info-div">
+        <div class="border-div">
+            <p class="title-p">
+                淘宝红包&nbsp;&nbsp;玩法指南&nbsp;&nbsp;>
+            </p>
+            <p class="info-p">
+                1.点击「领取淘宝红包」，复制口令，打开淘宝领红包
+            </p>
+            <p class="info-p">
+                2.点击「红包抵扣商品专区」，输入已领取的红包余额
+            </p>
+            <p class="info-p">
+                3.选择喜欢的商品，生成口令去淘宝下单领取即可
+            </p>
+            <div class="button-div">
+                <div class="left">
+                    <input type="image" src="img/left-button.png" />
+                </div>
+                <div class="right">
+                    <input type="image" src="img/right-button.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-div">
+        <input type="image" src="img/bottom-button.png" onclick="showDialog()" />
+        <p>领了红包才能进入商品专区</p>
+    </div>
+
+    <div class="background" onclick="hideDialog()"></div>
+	<div class="dialog-div">
+		<div class="dialog">
+            <img class="gb-img" src="img/gb.png" onclick="hideDialog()"/>
+			<div class="top">
+				<p class="title">请选择你已领到的红包金额</p>
+            </div>
+            <div class="item">
+                <span onclick="ItemCheck(0)" class="click">未领取</span>
+                <span onclick="ItemCheck(1)">2元</span>
+                <span onclick="ItemCheck(2)">3元</span>
+            </div>
+            <div class="item">
+                <span onclick="ItemCheck(3)">4元</span>
+                <span onclick="ItemCheck(4)">5元</span>
+                <span onclick="ItemCheck(5)">6元</span>
+            </div>
+			<div class="bottom">
+				<div class="button" onclick="hideDialog()">确定</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+        $(function(){
+            $("div.background").hide();
+            $("div.dialog-div").hide();
+        })
+        function submit(){
+            
+        }
+        function ItemCheck(index){
+            $(".item span").removeClass("click");
+            $(".item span").eq(index).addClass("click");
+        }
+        //隐藏弹层
+        function hideDialog() {
+            $("div.background").hide();
+            $("div.dialog-div").hide();
+        }
+
+		//显示弹层
+        function showDialog(text) {
+            $("div.background").show();
+            $("div.dialog-div").show();
+        }
+</script>
+</html>
